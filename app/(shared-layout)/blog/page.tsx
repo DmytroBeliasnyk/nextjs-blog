@@ -53,7 +53,6 @@ const BlogList = async () => {
               }
               alt="Post image"
               fill
-              unoptimized
               className="rounded-t-lg object-cover"
             />
           </div>

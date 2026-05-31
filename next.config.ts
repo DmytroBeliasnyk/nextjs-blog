@@ -10,9 +10,9 @@ const nextConfig: NextConfig = {
         port: "",
       },
       {
-        hostname: "127.0.0.1",
-        protocol: "http",
-        port: "3210",
+        hostname: "ceaseless-pig-377.eu-west-1.convex.cloud",
+        protocol: "https",
+        port: "",
       },
     ],
   },
