@@ -1,0 +1,10 @@
+import { query } from "./_generated/server";
+import { authComponent } from "./auth";
+
+export const getUser = query({
+  args: {},
+  handler: async (ctx) => {
+    const user = await authComponent.safeGetAuthUser(ctx);
+    return user;
+  },
+});
