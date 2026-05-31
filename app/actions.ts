@@ -3,7 +3,7 @@
 import { api } from "@/convex/_generated/api";
 import { getToken } from "@/lib/auth-server";
 import { fetchMutation } from "convex/nextjs";
-import { revalidatePath } from "next/cache";
+import { updateTag } from "next/cache";
 import { redirect } from "next/navigation";
 import z from "zod";
 import { PostSchema } from "./schemas/blog";
@@ -54,6 +54,6 @@ export async function createBlogAction(values: z.infer<typeof PostSchema>) {
     };
   }
 
-  revalidatePath("/blog");
+  updateTag("blog");
   return redirect("/blog");
 }
